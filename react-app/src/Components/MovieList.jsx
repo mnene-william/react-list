@@ -34,15 +34,23 @@ function MovieList(){
             return(
             
             <>
-              <h1>Movies</h1>
+            <h1>Movies</h1>
+          <div className='movie-list'>
+            <div className='movie-form'>
               <input type="text" placeholder="Enter Movie Title" value={movieTitle.title} onChange={changeTitle}/><br />
-              <input type="text" placeholder="Enter year of release" value={movieYear.year} onChange={changeYear} /><br />
+              <input type="number" placeholder="Enter year of release" value={movieYear.year} onChange={changeYear} /><br />
               <input type="text" placeholder="Enter category" value={movieCategory.category} onChange={changeCategory}/><br />
               <button onClick={addMovie}>Add movie</button>
-      <ul>
-        {movies.map((movie, index) => <li key={index}>{movie.title}   {movie.year}  {movie.category}</li>)}
+            </div>
+            <div className='movie-list-display'>
+             <ul>
+             {movies.map((movie, index) => <li key={index}><span>{movie.title}</span> <span>({movie.year})</span> <span>{movie.category}</span></li>)}
         
-      </ul>
+              </ul>
+            </div>
+          </div>
+          
+            
       </>)
 }
      

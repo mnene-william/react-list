@@ -1,10 +1,10 @@
- import MovieList from './MovieList';      
+     
 
 function List() {
 
  return (
     <>
-    <MovieList />
+    
      
     </>
   );

@@ -1,16 +1,15 @@
-import List from './Components/List.jsx';
+import MovieList from './Components/MovieList.jsx';
 
 
 function App() {
   
  return( 
   <>
-  <List />
-  
-   
-    </>
+  <MovieList />
+  </>
+
   ); 
   
 }
 
-export default App
+export default App;

@@ -18,6 +18,7 @@ function MovieList(){
             setMovies(m => [...m, newMovie]);
 
         }
+        
 
         function changeTitle(e){
             setMovieTitle(e.target.value);
@@ -30,6 +31,8 @@ function MovieList(){
         function changeCategory(e){
             setMovieCategory(e.target.value);
         }
+    
+    
 
             return(
             
@@ -44,14 +47,16 @@ function MovieList(){
             </div>
             <div className='movie-list-display'>
              <ul>
-             {movies.map((movie, index) => <li key={index}><span>{movie.title}</span> <span>({movie.year})</span> <span>{movie.category}</span></li>)}
+             {movies.map((movie, index) => <li key={index}><span>{movie.title}</span> <span>({movie.year})</span> <span>{movie.category}</span> <span></span></li>)}
         
               </ul>
+              <ul></ul>
             </div>
           </div>
           
             
       </>)
 }
+
      
 export default MovieList;
